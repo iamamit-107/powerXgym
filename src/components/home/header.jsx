@@ -5,37 +5,36 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
     return (
-        <div className="container fixed-top">
-            <nav className="navbar navbar-expand-lg">
-                <NavLink className="navbar-brand" to="/">
-                    POWER <span className="text-warning">X</span>
-                </NavLink>
-                <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav ml-auto">
-                        <li className="nav-item">
-                            {/* <NavLink>
-                                Home <span className="sr-only">(current)</span>
-                            </NavLink> */}
-                            <NavLink
-                                className="nav-link"
-                                to="/"
-                                activeClassName="active"
-                            >
-                                Home
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
+        <div className="bg-color">
+            <div className="container">
+                <nav className="navbar navbar-expand-lg">
+                    <NavLink className="navbar-brand" to="/">
+                        POWER <span className="text-warning">X</span>
+                    </NavLink>
+                    <button
+                        className="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav ml-auto">
+                            <li className="nav-item">
+                                <NavLink
+                                    exact={true}
+                                    className="nav-link"
+                                    to="/"
+                                    activeClassName="active"
+                                >
+                                    Home
+                                </NavLink>
+                            </li>
+                            {/* <li className="nav-item">
                             <NavLink
                                 className="nav-link"
                                 to="/"
@@ -43,17 +42,17 @@ const Header = () => {
                             >
                                 Services
                             </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink
-                                className="nav-link"
-                                to="/class"
-                                activeClassName="active"
-                            >
-                                Our Classes
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
+                        </li> */}
+                            <li className="nav-item">
+                                <NavLink
+                                    className="nav-link"
+                                    to="/class"
+                                    activeClassName="active"
+                                >
+                                    Our Classes
+                                </NavLink>
+                            </li>
+                            {/* <li className="nav-item">
                             <NavLink
                                 className="nav-link"
                                 to="/"
@@ -61,17 +60,17 @@ const Header = () => {
                             >
                                 About Us
                             </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink
-                                className="nav-link"
-                                to="/pricing"
-                                activeClassName="active"
-                            >
-                                Pricing
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
+                        </li> */}
+                            <li className="nav-item">
+                                <NavLink
+                                    className="nav-link"
+                                    to="/pricing"
+                                    activeClassName="active"
+                                >
+                                    Pricing
+                                </NavLink>
+                            </li>
+                            {/* <li className="nav-item">
                             <NavLink
                                 className="nav-link"
                                 to="/"
@@ -79,10 +78,11 @@ const Header = () => {
                             >
                                 Contact Us
                             </NavLink>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+                        </li> */}
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </div>
     );
 };

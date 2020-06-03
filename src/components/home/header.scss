@@ -1,6 +1,6 @@
 nav {
     .navbar-brand {
-        color: white;
+        color: white !important;
     }
 
     .nav-link {
@@ -14,4 +14,8 @@ nav {
     .active {
         color: rgb(255, 209, 83);
     }
+}
+
+.bg-color {
+    background-color: black;
 }

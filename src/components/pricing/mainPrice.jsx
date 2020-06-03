@@ -3,17 +3,19 @@ import "./mainPrice.scss";
 import Header from "../home/header";
 import CommonHero from "../commonHero/commonHero";
 import Footer from "../home/footer";
-import { PriceData } from "../../Data/priceData";
+
 import PricePage from "./pricePage";
 
 const MainPrice = () => {
-    const [prices, setPrices] = useState();
+    const [prices, setPrices] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetch("http://power-x-gym-backend.herokuapp.com/pricings")
             .then((res) => res.json())
             .then((data) => {
                 setPrices(data);
+                setLoading(false);
             });
     }, []);
 
@@ -41,9 +43,19 @@ const MainPrice = () => {
                             </p>
                         </div>
                     </div>
+                    {loading && (
+                        <div class="d-flex justify-content-center">
+                            <div
+                                class="spinner-border text-warning"
+                                role="status"
+                            >
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                    )}
                     <div className="row mt-5">
-                        {PriceData.map((price) => (
-                            <PricePage key={price.id} data={price} />
+                        {prices.map((price) => (
+                            <PricePage key={price._id} data={price} />
                         ))}
                     </div>
                 </div>

@@ -40,11 +40,11 @@ const Footer = () => {
                     </div>
                     <div className="col-lg-2">
                         <h3>Connect with Us</h3>
-                        <i class="fab fa-facebook-f"></i>
-                        <i class="fab fa-youtube"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-whatsapp"></i>
+                        <i className="fab fa-facebook-f"></i>
+                        <i className="fab fa-youtube"></i>
+                        <i className="fab fa-instagram"></i>
+                        <i className="fab fa-twitter"></i>
+                        <i className="fab fa-whatsapp"></i>
                     </div>
                     <div className="col-lg-3">
                         <h3>Join Our Newsletter</h3>
